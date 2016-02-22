@@ -1,0 +1,38 @@
+{% extends "management/base.html" %}
+{% load staticfiles%}
+{% block title %}添加图书{% endblock %}
+
+{% block content %}
+
+    <!-- 下面是关于 bootstrap 布局的部分-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-0
+                col-sm-10 col-sm-offset-1">
+
+            <!-- 对于状态的优化，自己还可以看well的内容-->
+                {% if state=='success' %}
+                    <div class="well">
+                    <h4 class="text-center">添加成功</h4>
+
+                    </div>
+                {% endif %}
+
+                <form method="POST" role="form"
+                      class="form-horizontal">
+                    {% csrf_token %}
+                    <h3 class="form-signin-heading text-center">
+                        添加图书
+                    </h3>
+                    <div class="form-group">
+                        <label
+                    </div>
+
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
